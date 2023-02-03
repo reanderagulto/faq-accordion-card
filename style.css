@@ -1,0 +1,56 @@
+:root {
+    --desaturated-blue: #1d1e35;
+    --soft-red: #f47c57;
+    --soft-violet: #af67e9;
+    --soft-blue: #6565e7;
+    --gradient-base-color: #6565e7;
+    --bg-gradient: linear-gradient(0deg, rgba(101,101,231,1) 13%, rgba(175,103,233,1) 58%);
+    --very-grayish-blue: #4a4b5e;
+    --grayish-blue: #787887;
+    --light-grayish-blue: hsl(240, 5%, 91%);
+
+    --font-kumbh: 'Kumbh Sans', sans-serif;
+    --font-size: 0.75rem;
+    --transition-all-ease: all 0.3s ease;
+}
+
+body {
+    margin: unset;
+    background: var(--gradient-base-color);
+    background: var(--bg-gradient);
+}
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    
+        main img.floating-box {
+            max-width: 100%;
+            position: absolute;
+            top: 60%;
+            transform: translateY(-50%);
+            left: max(-6.250vw, -91px);
+            z-index: 999;
+        }
+
+        main .main-container { 
+            position: relative;
+        }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: #FFF;
+                overflow: hidden;
+                padding: 5.333vw;
+            }
+            
+                .container .col {
+                    width: 50%;
+                }
