@@ -18,6 +18,8 @@ body {
     margin: unset;
     background: var(--gradient-base-color);
     background: var(--bg-gradient);
+    font-family: var(--font-kumbh);
+    font-size: var(--font-size);
 }
 
     main {
@@ -27,13 +29,12 @@ body {
         min-height: 100vh;
     }
 
-    
         main img.floating-box {
             max-width: 100%;
             position: absolute;
             top: 60%;
             transform: translateY(-50%);
-            left: max(-6.250vw, -91px);
+            left: max(-9.25vw, -125px);
             z-index: 999;
         }
 
@@ -48,9 +49,78 @@ body {
                 justify-content: center;
                 background-color: #FFF;
                 overflow: hidden;
-                padding: 5.333vw;
+                padding: 2vw 5vw;
+                max-width: 100%;
+                width: 900px;
+                border-radius: 15px;
             }
             
                 .container .col {
                     width: 50%;
                 }
+
+                .container .col.image-wrapper {
+                    position: relative;
+                    display: block;
+                }
+
+                    .container .col.image-wrapper .image-container {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -9rem;
+                        height: auto;
+                        width: 100%;
+                    }
+                
+.accordion {
+    margin-bottom: 1.3rem;
+}
+
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+    }
+
+        .accordion-header:hover {
+            cursor: pointer;
+        }
+
+    .accordion-header span {
+        color: var(--very-grayish-blue);
+        font-family: var(--font-kumbh);
+        transition: all 0.3s ease;
+    }
+
+    .accordion.enabled .accordion-header span {
+        font-weight: 700;
+    }
+
+        .accordion-header:hover span{
+            color: var(--soft-red);
+        }
+
+        .accordion-header button.accordion-button {
+            background: none;
+            border: unset;
+            transition: all 0.8s ease;
+            height: 15px;
+        }
+
+        .accordion.enabled .accordion-header button.accordion-button{
+            transform: rotateX(-180deg);
+        }
+
+    .accordion-content {
+        margin-top: 0.45rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--grayish-blue);
+        transition: max-height 0.15s ease-out;
+    }
+
+    .accordion-content.active{
+        visibility: visible;
+        height: 100%;
+    }
